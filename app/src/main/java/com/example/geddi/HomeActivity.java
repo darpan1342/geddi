@@ -1,22 +1,23 @@
 package com.example.geddi;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.EditText;
-import android.widget.ImageButton;
 
-import java.util.Vector;
-
-public class MainActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity {
     EditText searh;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        searh = (EditText) findViewById(R.id.search);
+        ViewPager fragment= (ViewPager)findViewById(R.id.viewpager);
+        FragmentPager adapter= new FragmentPager(getSupportFragmentManager());
+        fragment.setAdapter(adapter);
+
+        /*searh = (EditText) findViewById(R.id.search);
         Button next = (Button) findViewById(R.id.next);
         next.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -24,6 +25,6 @@ public class MainActivity extends AppCompatActivity {
                 String str= searh.getText().toString().trim();
                 searh.setText("knkj");
             }
-        });
+        });*/
     }
 }
