@@ -42,4 +42,5 @@
         app:layout_constraintStart_toStartOf="@+id/search"
         app:layout_constraintTop_toTopOf="@+id/search"
         app:layout_constraintVertical_bias="0.0" />
+
 </android.support.constraint.ConstraintLayout>

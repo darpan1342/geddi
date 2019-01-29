@@ -13,11 +13,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        int STATIC_SPLASH_TIMEOUT = 3000;
+        int STATIC_SPLASH_TIMEOUT = 2000;
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent homeIntent = new Intent(MainActivity.this, HomeActivity.class);
+                Intent homeIntent = new Intent(MainActivity.this, AccountCreation.class);
                 startActivity(homeIntent);
                 finish();
             }

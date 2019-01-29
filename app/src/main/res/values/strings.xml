@@ -1,7 +1,14 @@
 <resources>
     <string name="app_name">geddi</string>
     <string name="search_here">search here</string>
-    <string name="login">login</string>
     <string name="todo">TODO</string>
     <string name="a_travel_companion">A travel companion</string>
+    <string name="login_screen">Login Screen</string>
+    <string name="already_a_user">Already have an Account?…</string>
+    <string name="login">login</string>
+    <string name="create_account">Create Account</string>
+    <string name="or">or</string>
+    <string name="sign_up_with_google_or_facebook">sign up with <a>google</a> or <a>facebook</a>.</string>
+    <string name="read_terms_and_conditions"><u>Read terms and conditions.</u></string>
+    <string name="create_account_screen">Create Account Screen</string>
 </resources>
