@@ -35,7 +35,6 @@
         android:layout_marginEnd="85dp"
         android:layout_marginRight="85dp"
         android:layout_marginBottom="260dp"
-        android:fontFamily="@font/inkfree"
         android:text="@string/a_travel_companion"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="30sp"
