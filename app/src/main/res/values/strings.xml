@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">geddi</string>
+    <string name="search_here">search here</string>
+    <string name="login">login</string>
+    <string name="todo">TODO</string>
+    <string name="a_travel_companion">A travel companion</string>
 </resources>
