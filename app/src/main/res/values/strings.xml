@@ -3,4 +3,8 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search_here">search here</string>
+    <string name="login">login</string>
+    <string name="todo">TODO</string>
+    <string name="a_travel_companion">A travel companion</string>
 </resources>
