@@ -18,19 +18,23 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Home"/>
+            android:text="Home"
+            android:id="@+id/home"/>
         <Button
             android:layout_width="48dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/ic_search_black_24dp"/>
+            android:background="@drawable/ic_search_black_24dp"
+            android:id="@+id/search_page"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ADD"/>
+            android:text="ADD"
+            android:id="@+id/add"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Account"/>
+            android:text="Account"
+            android:id="@+id/account"/>
 
     </LinearLayout>
 

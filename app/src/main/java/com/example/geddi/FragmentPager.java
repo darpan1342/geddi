@@ -12,13 +12,13 @@ public class FragmentPager extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int i) {
         if (i == 0) {
-            return new SearchPage();
+            return new HomePage();
         } else if (i == 1)
             return new SearchPage();
         else if (i == 2)
-            return new SearchPage();
+            return new AddPage();
         else
-            return new SearchPage();
+            return new AccountPage();
     }
 
     @Override
