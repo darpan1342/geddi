@@ -16,7 +16,6 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
         final ViewPager fragment = findViewById(R.id.viewpager);
         final BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav_bar);
         bottomNavigationView.setOnNavigationItemSelectedListener(
@@ -43,9 +42,6 @@ public class HomeActivity extends AppCompatActivity {
                         return false;
                     }
                 });
-        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        fragment.setAdapter(adapter);
-
         fragment.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -62,7 +58,6 @@ public class HomeActivity extends AppCompatActivity {
                 Log.d("page", "onPageSelected: " + position);
                 bottomNavigationView.getMenu().getItem(position).setChecked(true);
                 prevMenuItem = bottomNavigationView.getMenu().getItem(position);
-
             }
 
             @Override
@@ -74,7 +69,6 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void setupViewPager(ViewPager viewPager) {
-
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new HomePage());
         adapter.addFragment(new SearchPage());
