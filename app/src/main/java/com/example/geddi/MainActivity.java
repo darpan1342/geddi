@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        int STATIC_SPLASH_TIMEOUT = 3000;
+        int STATIC_SPLASH_TIMEOUT = 1800;
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
