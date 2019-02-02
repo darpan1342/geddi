@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.geddi.HomePage">
+    tools:context=".AlertPage">
 
     <!-- TODO: Update blank fragment layout -->
     <RelativeLayout
@@ -16,6 +16,8 @@
             android:layout_centerVertical="true"
             android:textAlignment="center"
             android:textSize="20sp"
-            android:text="HOME"/>
+            android:text="ALERTS"/>
     </RelativeLayout>
+
+
 </FrameLayout>

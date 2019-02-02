@@ -6,9 +6,16 @@
     tools:context=".AccountPage">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="hello account fragment" />
-
+        tools:ignore="UselessParent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:text="ACCOUNT"/>
+    </RelativeLayout>
 </FrameLayout>

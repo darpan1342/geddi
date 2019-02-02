@@ -3,5 +3,9 @@
     <color name="colorPrimary">#707070</color>
     <color name="colorPrimaryDark">#FF2929</color>
     <color name="colorAccent">#009688</color>
-    <color name="isSelected">#EFEFEF</color>
+    <color name="white">#fff</color>
+    <color name="red">#f00</color>
+    <color name="green">#0f0</color>
+    <color name="blue">#00f</color>
+    <color name="yellow">#ff0</color>
 </resources>

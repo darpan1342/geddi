@@ -17,6 +17,10 @@
             android:icon="@drawable/ic_action_add"
             android:title="" />
         <item
+            android:id="@+id/alert"
+            android:icon="@drawable/ic_action_alert"
+            android:title="" />
+        <item
             android:id="@+id/account"
             android:icon="@drawable/ic_action_profile"
             android:title="" />

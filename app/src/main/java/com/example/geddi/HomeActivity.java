@@ -33,8 +33,11 @@ public class HomeActivity extends AppCompatActivity {
                             case R.id.add:
                                 fragment.setCurrentItem(2);
                                 break;
-                            case R.id.account:
+                            case R.id.alert:
                                 fragment.setCurrentItem(3);
+                                break;
+                            case R.id.account:
+                                fragment.setCurrentItem(4);
                                 break;
                         }
                         return false;
@@ -76,6 +79,7 @@ public class HomeActivity extends AppCompatActivity {
         adapter.addFragment(new HomePage());
         adapter.addFragment(new SearchPage());
         adapter.addFragment(new AddPage());
+        adapter.addFragment(new AlertPage());
         adapter.addFragment(new AccountPage());
         viewPager.setAdapter(adapter);
 
