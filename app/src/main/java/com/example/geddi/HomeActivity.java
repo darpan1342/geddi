@@ -40,7 +40,7 @@ public class HomeActivity extends AppCompatActivity {
                         return false;
                     }
                 });
-        FragmentPager adapter = new FragmentPager(getSupportFragmentManager());
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         fragment.setAdapter(adapter);
 
         fragment.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -67,9 +67,7 @@ public class HomeActivity extends AppCompatActivity {
 
             }
         });
-
         setupViewPager(fragment);
-
     }
 
     private void setupViewPager(ViewPager viewPager) {
@@ -82,6 +80,4 @@ public class HomeActivity extends AppCompatActivity {
         viewPager.setAdapter(adapter);
 
     }
-
-
 }
