@@ -8,7 +8,6 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 
 public class HomeActivity extends AppCompatActivity {
-    EditText searh;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
