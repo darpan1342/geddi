@@ -1,50 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity"
-    android:id="@+id/rl">
+    tools:context=".HomeActivity">
+
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
-        android:layout_height="650dp"
-        />
+        android:layout_height="match_parent" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
         android:layout_alignParentBottom="true">
-        <Button
+
+        <ImageButton
+            android:id="@+id/home"
             style="@style/Base.Widget.AppCompat.Button.Borderless"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="Home"
-            android:id="@+id/home"/>
-        <Button
+            android:layout_weight="1"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/ic_action_home" />
+
+        <ImageButton
+            android:id="@+id/search_page"
             style="@style/Base.Widget.AppCompat.Button.Borderless"
-            android:layout_width="50dp"
+            android:layout_width="0dp"
             android:layout_height="50dp"
-            android:background="@drawable/ic_search_black_24dp"
-            android:id="@+id/search_page"/>
-        <Button
+            android:layout_weight="1"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/ic_action_search" />
+
+        <ImageButton
+            android:id="@+id/add"
             style="@style/Base.Widget.AppCompat.Button.Borderless"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="ADD"
-            android:id="@+id/add"/>
-        <Button
+            android:layout_weight="1"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/ic_action_add" />
+
+        <ImageButton
+            android:id="@+id/account"
             style="@style/Base.Widget.AppCompat.Button.Borderless"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="Account"
-            android:id="@+id/account"/>
+            android:layout_weight="1"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/ic_action_profile" />
     </LinearLayout>
 
-    </RelativeLayout>
+</RelativeLayout>
 
