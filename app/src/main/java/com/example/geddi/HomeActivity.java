@@ -1,50 +1,87 @@
 package com.example.geddi;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
+import android.util.Log;
+import android.view.MenuItem;
 
 public class HomeActivity extends AppCompatActivity {
-    EditText searh;
+
+    MenuItem prevMenuItem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        final ViewPager fragment= (ViewPager)findViewById(R.id.viewpager);
-        FragmentPager adapter= new FragmentPager(getSupportFragmentManager());
+
+        final ViewPager fragment = findViewById(R.id.viewpager);
+        final BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav_bar);
+        bottomNavigationView.setOnNavigationItemSelectedListener(
+                new BottomNavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                        switch (menuItem.getItemId()) {
+                            case R.id.home:
+                                fragment.setCurrentItem(0);
+                                break;
+                            case R.id.search_page:
+                                fragment.setCurrentItem(1);
+                                break;
+                            case R.id.add:
+                                fragment.setCurrentItem(2);
+                                break;
+                            case R.id.account:
+                                fragment.setCurrentItem(3);
+                                break;
+                        }
+                        return false;
+                    }
+                });
+        FragmentPager adapter = new FragmentPager(getSupportFragmentManager());
         fragment.setAdapter(adapter);
-        Button search = (Button) findViewById(R.id.search_page);
-        Button add = (Button) findViewById(R.id.add);
-        Button account = (Button) findViewById(R.id.account);
-        Button home = (Button) findViewById(R.id.home);
-        search.setOnClickListener(new View.OnClickListener() {
+
+        fragment.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
-            public void onClick(View v) {
-            fragment.setCurrentItem(1);
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                if (prevMenuItem != null) {
+                    prevMenuItem.setChecked(false);
+                } else {
+                    bottomNavigationView.getMenu().getItem(0).setChecked(false);
+                }
+                Log.d("page", "onPageSelected: " + position);
+                bottomNavigationView.getMenu().getItem(position).setChecked(true);
+                prevMenuItem = bottomNavigationView.getMenu().getItem(position);
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
             }
         });
-        home.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                fragment.setCurrentItem(0);
-            }
-        });
-        add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                fragment.setCurrentItem(2);
-            }
-        });
-        account.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                fragment.setCurrentItem(3);
-            }
-        });
+
+        setupViewPager(fragment);
+
     }
+
+    private void setupViewPager(ViewPager viewPager) {
+
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
+        adapter.addFragment(new HomePage());
+        adapter.addFragment(new SearchPage());
+        adapter.addFragment(new AddPage());
+        adapter.addFragment(new AccountPage());
+        viewPager.setAdapter(adapter);
+
+    }
+
+
 }

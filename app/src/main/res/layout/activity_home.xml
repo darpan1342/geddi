@@ -2,49 +2,23 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity"
-    android:id="@+id/rl">
+    tools:context=".HomeActivity">
+
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
-        android:layout_height="650dp"
-        />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
-        android:layout_alignParentBottom="true">
-        <Button
-            style="@style/Base.Widget.AppCompat.Button.Borderless"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text="Home"
-            android:id="@+id/home"/>
-        <Button
-            style="@style/Base.Widget.AppCompat.Button.Borderless"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@drawable/ic_search_black_24dp"
-            android:id="@+id/search_page"/>
-        <Button
-            style="@style/Base.Widget.AppCompat.Button.Borderless"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text="ADD"
-            android:id="@+id/add"/>
-        <Button
-            style="@style/Base.Widget.AppCompat.Button.Borderless"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text="Account"
-            android:id="@+id/account"/>
-    </LinearLayout>
+        android:layout_height="match_parent" />
 
-    </RelativeLayout>
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottom_nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="?android:attr/windowBackground"
+        android:elevation="4dp"
+        app:menu="@menu/navigation_menu" />
+</RelativeLayout>
 
