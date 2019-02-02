@@ -1,11 +1,6 @@
 <resources>
-    <string name="app_name">geddi</string>
+    <string name="app_name">Geddi</string>
     <string name="search_here">search here</string>
-    <string name="login">login</string>
     <string name="a_travel_companion">A travel companion</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="todo">TODO</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
