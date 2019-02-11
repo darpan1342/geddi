@@ -11,4 +11,8 @@
     <string name="sign_up_with_google_or_facebook">sign up with <a>google</a> or <a>facebook</a>.</string>
     <string name="read_terms_and_conditions"><u>Read terms and conditions.</u></string>
     <string name="create_account_screen">Create Account Screen</string>
+    <string name="enter_email">enter email</string>
+    <string name="enter_password">enter password</string>
+    <string name="login_to_geddi">Login to Geddi…</string>
+    <string name="logout">logout</string>
 </resources>

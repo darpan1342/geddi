@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "380855903830",
+    "firebase_url": "https://geddi-7a54d.firebaseio.com",
+    "project_id": "geddi-7a54d",
+    "storage_bucket": "geddi-7a54d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:380855903830:android:41653a3fce3e9350",
+        "android_client_info": {
+          "package_name": "com.example.geddi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "380855903830-7j2c44im2v5ln7tv87vasuuiqaqjovie.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.geddi",
+            "certificate_hash": "469c480fddee34d029f1d7f3fe9144ad919cc4fe"
+          }
+        },
+        {
+          "client_id": "380855903830-q1cqhoj986rok2mr2r31t947720kg8ns.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1QOs4sfmrGuEla8IVyQdfF5aw6aFwhuw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "380855903830-q1cqhoj986rok2mr2r31t947720kg8ns.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

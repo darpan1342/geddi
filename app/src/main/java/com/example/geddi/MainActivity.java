@@ -12,7 +12,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         int STATIC_SPLASH_TIMEOUT = 2000;
         new Handler().postDelayed(new Runnable() {
             @Override
