@@ -8,6 +8,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -66,11 +67,15 @@ public class CreateAccountPage extends AppCompatActivity {
         }
 
         progressBar.setVisibility(View.VISIBLE);
+
+        disableTouch(true);
+
         mAuth.createUserWithEmailAndPassword(email, pass)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         progressBar.setVisibility(View.GONE);
+                        disableTouch(false);
                         if (task.isComplete()) {
                             updateUI(mAuth.getCurrentUser());
                         } else {
@@ -80,6 +85,16 @@ public class CreateAccountPage extends AppCompatActivity {
                         }
                     }
                 });
+    }
+
+    private void disableTouch(boolean b) {
+        if (b) {
+            getWindow().setFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE,
+                    WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+        } else {
+            getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+
+        }
     }
 
     @Override
