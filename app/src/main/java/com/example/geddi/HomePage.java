@@ -13,7 +13,7 @@ public class HomePage extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         //new change();
-        return inflater.inflate(R.layout.fragment_home_fragment, container, false);
+        return inflater.inflate(R.layout.fragment_home_page, container, false);
     }
 
 }

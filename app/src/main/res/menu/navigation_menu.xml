@@ -22,7 +22,7 @@
             android:title="" />
         <item
             android:id="@+id/account"
-            android:icon="@drawable/ic_action_profile"
+            android:icon="@drawable/ic_action_account"
             android:title="" />
     </group>
 

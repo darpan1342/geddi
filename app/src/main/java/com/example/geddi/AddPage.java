@@ -13,7 +13,7 @@ public class AddPage extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         //new change();
-        return inflater.inflate(R.layout.fragment_add_fragment, container, false);
+        return inflater.inflate(R.layout.fragment_add_page, container, false);
     }
 
 }

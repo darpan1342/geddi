@@ -12,6 +12,6 @@ public class AlertPage extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         //new change();
-        return inflater.inflate(R.layout.fragment_alert_fragment, container, false);
+        return inflater.inflate(R.layout.fragment_alert_page, container, false);
     }
 }

@@ -12,13 +12,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
+
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/bottom_nav_bar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        app:itemIconTint="@color/orange"
         android:layout_alignParentBottom="true"
         android:background="?android:attr/windowBackground"
-        android:elevation="4dp"
         app:menu="@menu/navigation_menu" />
 </RelativeLayout>
-

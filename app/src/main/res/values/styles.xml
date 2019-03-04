@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
@@ -6,5 +6,24 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="text_style_accountCreation">
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/roboto_light</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="login_button_style">
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/roboto_light</item>
+        <item name="android:background">@drawable/login_button_background</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+    <style name="login_editText">
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:paddingStart" tools:ignore="NewApi">16dp</item>
+        <item name="android:paddingEnd" tools:ignore="NewApi">16dp</item>
+        <item name="android:background">@drawable/custom_edit_text</item>
     </style>
 </resources>

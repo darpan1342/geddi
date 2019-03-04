@@ -13,7 +13,7 @@ public class SearchPage extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         //new change();
-        return inflater.inflate(R.layout.fragment_search_fragment, container, false);
+        return inflater.inflate(R.layout.fragment_search_page, container, false);
     }
 
 }

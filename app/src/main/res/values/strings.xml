@@ -1,6 +1,24 @@
 <resources>
     <string name="app_name">Geddi</string>
-    <string name="search_here">search here</string>
-    <string name="a_travel_companion">A travel companion</string>
     <string name="todo">TODO</string>
+    <string name="a_travel_companion">A travel companion</string>
+    <string name="already_a_user">Already have an Account?…</string>
+    <string name="login_to_geddi">Login to Geddi…</string>
+    <string name="create_account">Create Account</string>
+    <string name="or">or</string>
+    <string name="sign_up_with_google_or_facebook">sign up with <a>google</a> or <a>facebook</a>.</string>
+    <string name="read_terms_and_conditions"><u>Read terms and conditions.</u></string>
+    <string name="create_account_screen">Create Account Screen</string>
+    <string name="beta_login">beta Login</string>
+    <string name="logout">Logout</string>
+    <string name="enter_email">enter email</string>
+    <string name="enter_password">enter password</string>
+    <string name="login">login</string>
+    <string name="join_geddi">Join Geddi…</string>
+    <string name="account">ACCOUNT</string>
+    <string name="add">ADD</string>
+    <string name="alerts">ALERTS</string>
+    <string name="home">HOME</string>
+    <string name="search">SEARCH</string>
+
 </resources>
