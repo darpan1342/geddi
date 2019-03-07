@@ -12,7 +12,7 @@ public class AddPage extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_add_fragment, container, false);
-        //new change();
+
         return rootView;
     }
 

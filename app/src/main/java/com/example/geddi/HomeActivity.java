@@ -2,19 +2,24 @@ package com.example.geddi;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.io.IOException;
+import java.util.List;
+import java.util.Locale;
+
 public class HomeActivity extends AppCompatActivity {
-    double latitude;
-    double longitude;
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
@@ -32,14 +37,10 @@ public class HomeActivity extends AppCompatActivity {
         }
         else
         {
-            GpsLocation gpsLocation = new GpsLocation(this);
-            latitude = gpsLocation.getLatitude();
-            longitude = gpsLocation.getLongitude();
-            TextView t = (TextView) findViewById(R.id.asd);
-            t.setText("/n" + latitude + "  " + longitude);
+            Log.i("pa","passed earlier");
         }
         final ViewPager fragment = (ViewPager) findViewById(R.id.viewpager);
-        FragmentPager adapter = new FragmentPager(getSupportFragmentManager());
+        FragmentPager adapter = new FragmentPager(getSupportFragmentManager(),this);
         fragment.setAdapter(adapter);
         Button search = (Button) findViewById(R.id.search_page);
         Button add = (Button) findViewById(R.id.add);
@@ -70,17 +71,6 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        /*Geocoder gcd = new Geocoder(this, Locale.getDefault());
-        try {
-            List<Address> addressList = gcd.getFromLocation(latitude,longitude,1);
-            if(addressList.size()>0)
-            {
-                t.setText(addressList.get(0).getSubAdminArea());
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }*/
-
     }
 
     public void onRequestPermissionsResult(int requestCode, String[] permissions,
@@ -88,11 +78,7 @@ public class HomeActivity extends AppCompatActivity {
         switch (requestCode)
         {
             case 10: {
-                GpsLocation gpsLocation = new GpsLocation(this);
-                latitude = gpsLocation.getLatitude();
-                longitude = gpsLocation.getLongitude();
-                TextView t = (TextView) findViewById(R.id.asd);
-                t.setText("/n" + latitude + "  " + longitude);
+                Log.i("pass","sucessfully granted");
             }
                 break;
                 default:
