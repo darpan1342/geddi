@@ -48,7 +48,7 @@ public class PlacesName extends AsyncTask<Void,Void,Void>{
 
     @Override
     protected Void doInBackground(Void... voids) {
-            String link = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+latitude+","+longitude+"&radius=5000&key=AIzaSyDNCuwXUgnWQ2zopS2Hy4hkHgOx20Q13MQ";
+            String link = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+latitude+","+longitude+"&radius=5000&key=YOUR_API_KEY";
 
         try {
             URL url = new URL(link);
