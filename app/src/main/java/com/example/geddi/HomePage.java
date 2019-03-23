@@ -9,12 +9,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import org.json.JSONException;
+
 @SuppressLint("ValidFragment")
 public class HomePage extends Fragment {
     private final Context mContext;
     double longitude;
     double latitude;
-
+    public static TextView t;
+    //public static string
     @SuppressLint("ValidFragment")
     public HomePage(Context mContext) {
         this.mContext = mContext;
@@ -24,14 +27,17 @@ public class HomePage extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+
         View rootView = inflater.inflate(R.layout.fragment_home_fragment, container, false);
         GpsLocation gpsLocation= new GpsLocation(mContext);
-        TextView t = (TextView)rootView.findViewById(R.id.asd);
+        t = (TextView)rootView.findViewById(R.id.asd);
         latitude = gpsLocation.getLatitude();
         longitude = gpsLocation.getLongitude();
-        PlacesName placesName= new PlacesName(longitude,latitude);
-        String l=placesName.names();
-        t.setText("\n"+latitude+"   "+longitude+" "+l);
+        String l=null;
+            PlacesName placesName= new PlacesName(longitude,latitude);
+            placesName.execute();
+            //l=placesName.t;
+            //t.setText("\n"+l);
         return rootView;
     }
 

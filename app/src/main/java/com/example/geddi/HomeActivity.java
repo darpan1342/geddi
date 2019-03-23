@@ -42,6 +42,7 @@ public class HomeActivity extends AppCompatActivity {
         final ViewPager fragment = (ViewPager) findViewById(R.id.viewpager);
         FragmentPager adapter = new FragmentPager(getSupportFragmentManager(),this);
         fragment.setAdapter(adapter);
+        fragment.setCurrentItem(1);
         Button search = (Button) findViewById(R.id.search_page);
         Button add = (Button) findViewById(R.id.add);
         Button account = (Button) findViewById(R.id.account);
