@@ -6,11 +6,10 @@
     tools:context="com.example.geddi.HomePage">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ListView
+        android:id="@+id/home_fragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="hello home fragment"
-        android:id="@+id/asd"
-        tools:ignore="InvalidId" />
+        android:layout_height="wrap_content">
+    </ListView>
 
 </FrameLayout>

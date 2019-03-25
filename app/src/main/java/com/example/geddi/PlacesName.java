@@ -2,7 +2,7 @@ package com.example.geddi;
 
 import android.os.AsyncTask;
 import android.util.Log;
-import android.widget.TextView;
+import android.view.View;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -15,36 +15,21 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
 
 public class PlacesName extends AsyncTask<Void,Void,Void>{
         double longitude;
         double latitude;
         URL url;
         String res="";
-        String t="";
+        String []t1;
+        String []t2;
+        ArrayList<Info> infoArrayList;
         PlacesName(double longitude,double latitude)
         {
             this.longitude=longitude;
             this.latitude=latitude;
         }
-
-        /*public  String name() {
-            String t = "";
-            try {
-                JSONObject req1 = new JSONObject(res);
-                JSONArray result = req1.getJSONArray("results");
-                for (int i = 0; i < result.length(); i++) {
-                    JSONObject current = result.getJSONObject(i);
-                    String s = current.getString("name");
-                    t = t + " " + s;
-                }
-                return t;
-            } catch (JSONException e) {
-                String h = "Error1";
-                Log.e("Placename", "parsing", e);
-                return h;
-            }
-        }*/
 
     @Override
     protected Void doInBackground(Void... voids) {
@@ -66,14 +51,46 @@ public class PlacesName extends AsyncTask<Void,Void,Void>{
         } catch (IOException e) {
             e.printStackTrace();
         }
+        try {
+            JSONObject req1 = new JSONObject(res);
+            JSONArray result = req1.getJSONArray("results");
+            t1= new String[result.length()];
+            t2=new String[result.length()];
+            for (int i = 0; i < result.length(); i++) {
+                JSONObject current = result.getJSONObject(i);
+                String y="";
+                try {
+                    JSONArray Image = current.getJSONArray("photos");
+                    JSONObject Imgref= Image.getJSONObject(0);
+                     y= Imgref.getString("photo_reference");
+
+                }
+                catch(JSONException e){
+                    y="";
+                }
+                String s = current.getString("name");
+                t1[i] = s;
+                t2[i]=y;
+
+            }
+        } catch (JSONException e) {
+            String h = "Error1";
+            Log.e("Placename", "parsing", e);
+        }
 
         return null;
     }
     @Override
     protected void onPostExecute(Void aVoid){
         super.onPostExecute(aVoid);
-        HomePage.t.setText(res);
-
+        infoArrayList= new ArrayList<>();
+        for(int i=0;i<t1.length;i++)
+        {
+            if(!t2[i].equals(""))
+            infoArrayList.add(new Info(t1[i],t2[i]));
+        }
+        InfoPlace infoPlace= new InfoPlace(HomePage.avc,infoArrayList);
+        HomePage.listView.setAdapter(infoPlace);
     }
 }
 
