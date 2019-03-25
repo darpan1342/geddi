@@ -15,7 +15,7 @@ public class ImageGet extends AsyncTask<Void,Void,Void> {
     ImageGet(String str)
     {
         link=str;
-        link="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference="+str+"&key=AIzaSyDNCuwXUgnWQ2zopS2Hy4hkHgOx20Q13MQ";
+        link="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference="+str+"&key=Your_API_KEY";
     }
     @Override
     protected Void doInBackground(Void... voids) {
